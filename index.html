@@ -1,246 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farzad Ziaie Nezhad</title>
-    <link rel="icon" type="image/x-icon" href="icon.ico">
-    <meta name="description" content="Farzad Ziaie Nezhad - PhD Candidate researching Neuroscience, Mathematical Modeling and Simulation, Machine Vision and Data analysis at Ernst Strungmann Institute (ESI) of the Max Planck Society.">
-    <meta name="keywords" content="Farzad Ziaie Nezhad, Neuroscience, Machine Visoin, System Identification, Machine Learning, Biomedical Engineering, Electronics, Computer Science">
-    <meta name="author" content="Farzad Ziaie Nezhad">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farzad Ziaie Nezhad — ML Engineer · Solution Architect ·  Biomedical Engineer</title>
+  <meta name="description" content="Farzad Ziaie Nezhad — PhD researcher (ESI & Goethe University Frankfurt) and ML/platform engineer. Wireless neural implants, markerless 3D pose with multi-camera systems, solution architecture, and MLOps/DevOps on AWS/GCP/HPC">
+  <meta name="keywords" content="Farzad Ziaie Nezhad, machine learning, neuroscience, biomedical engineering, wireless neural implants, markerless pose estimation, multi-camera systems, computer vision, signal processing, Frankfurt">
+  <meta name="author" content="Farzad Ziaie Nezhad">
+  <meta name="theme-color" content="#04060d">
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Farzad Ziaie Nezhad — ML Engineer · Solution Architect · Biomedical Engineer">
+  <meta property="og:description" content="PhD researcher at ESI & Goethe University Frankfurt. ML systems end-to-end: wireless neural implants, markerless 3D pose, MLOps/DevOps, solution architecture and consulting.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ziaie.de/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- <div class="logo">Sc</div> -->
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <!-- <li><a href="#awards">Awards</a></li> -->
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="about">
-            <div class="hero-content">
-                <h1>
-                    Farzad Ziaie Nezhad
-                    <strong>understanding Bio-signals/images & Knowledge</strong>
-                </h1>
-                <p class="subtitle">
-                    PhD Candidate in System Neuroscience, specializing in Machine Vision, 
-                    Mathematical Brain circuit Modeling, and Neural data analysis at <a href="https://esi-frankfurt.de/research/people/farzad-ziaie-nezhad/" title="Ernst Strüngmann Institute (ESI) of the Max Planck Society">Ernst Strüngmann Institute (ESI) of the Max Planck Society</a>.
-                </p>
-                
-                <div class="social-links">
-                    <a href="mailto:farzadziaien@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://scholar.google.com/citations?user=mg1fe0IAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://github.com/farzad-ziaie" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/farzad-ziaie-nezhad/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-                
-                <div class="cta-buttons">
-                    <a href="https://scholar.google.com/citations?user=mg1fe0IAAAAJ&hl=en" class="btn btn-primary">
-                        <i class="fas fa-book"></i> View Publications
-                    </a>
-                    <a href="https://github.com/farzad-ziaie" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub Projects
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-visual">
-                <div class="profile-photo-container">
-                    <img src="images/profile-photo.png" alt="Farzad Ziaie Nezhad" class="profile-photo">
-                </div>
-                <div class="visual-card">
-                    <h3>Current Focus</h3>
-                    <p>Healthy Locomotion</p>
-                </div>
-                <div class="visual-card">
-                    <h3>Current Focus</h3>
-                    <p>3d pose estimation</p>
-                </div>
-                <div class="visual-card">
-                    <h3>Tools</h3>
-                    <p>LNAV</p>
-                </div>
-                <div class="visual-card">
-                    <h3>Tools</h3>
-                    <p>AXERA</p>
-                </div>
-                <div class="visual-card">
-                    <h3>Tools</h3>
-                    <p>HomaCluster</p>
-                </div>
-                <div class="visual-card">
-                    <h3>Tools</h3>
-                    <p>Baslers recorder</p>
-                </div>
-            </div>
-        </section>
+  <!-- ambient spiking-neuron background -->
+  <canvas id="bg" aria-hidden="true"></canvas>
 
-        <!-- Research Section -->
-        <section id="research">
-            <div class="section-header">
-                <h2>Research Highlights</h2>
-                <p>Advancing the intersection of artificial intelligence and knowledge representation</p>
-            </div>
-            
-            <div class="research-grid" id="highlights-container">
-                <p class="loading">Loading research highlights...</p>
-            </div>
-        </section>
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <nav class="nav-inner">
+      <a class="logo" href="#top">Farzad<span class="logo-accent" aria-label="brain">🧠</span>Ziaie</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">about</a></li>
+        <li><a href="#research">research</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#playground">playground</a></li>
+        <li><a href="#cv">cv</a></li>
+        <li><a href="#background">background</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <a class="nav-cta" href="https://github.com/farzad-ziaie" target="_blank" rel="noopener">github ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
 
-        <!-- Publications Section -->
-        <section id="publications">
-            <div class="section-header">
-                <h2>Selected Publications</h2>
-                <p>
-                    For a complete list, visit my 
-                    <a href="https://scholar.google.com/citations?user=mg1fe0IAAAAJ&hl=en" target="_blank" style="color: var(--accent-light);">Google Scholar</a>
-                </p>
-            </div>
-            
-            <div class="publications-list" id="publications-container">
-                <p class="loading">Loading publications...</p>
-            </div>
-        </section>
-<!-- Experience Section -->
-<section id="experience">
-    <div class="section-header">
-        <h2>Academic & Professional Experience</h2>
+  <main id="page">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <p class="kicker">~/ziaie — portfolio <span class="kicker-dim">// neural_observatory</span></p>
+        <h1 class="hero-name">Farzad Ziaie<br>Nezhad</h1>
+        <p class="hero-roles">ML &amp; Platform Engineer <span>·</span> Solution Architect <span>·</span> Biomedical Engineer <span>·</span> PhD Researcher</p>
+        <p class="hero-tag">I design, build and run machine-learning systems <em>end-to-end</em> — data pipelines,
+          MLOps and cloud/HPC infrastructure, production computer vision and biomedical AI — and I can
+          <em>lead the team that ships them</em>: as an engineer, an architect, or a Biomedical Engineer.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#services">consulting &amp; services ↓</a>
+          <a class="btn btn-ghost" href="#projects">explore projects</a>
+          <a class="btn btn-ghost" href="#playground">try the playground ⚡</a>
+          <!-- <a class="btn btn-ghost" href="cv.pdf" download>📄 cv.pdf</a> -->
+        </div>
+        <div class="telemetry">
+          <span><i class="dot"></i>STATUS: OPEN TO COLLAB &amp; CONSULTING</span>
+          <span>LOC: 50.11°N 8.68°E FRANKFURT</span>
+          <span>AFFIL: ESI × GOETHE UNIV.</span>
+          <span>PHD: WIRELESS IMPLANTS × 3D POSE</span>
+          <span>OFFERING: ARCHITECTURE · MLOPS · DEVICES</span>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#research" aria-label="scroll down"><span></span></a>
+    </section>
+
+    <!-- ===== TICKER ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span>solution architecture</span><span>MLOps</span><span>DevOps</span><span>Biomedical Engineer</span><span>consulting</span>
+        <span>PyTorch</span><span>spike trains</span><span>markerless 3D pose</span><span>Computer Vision</span><span>wireless implants</span>
+        <span>EEG · EMG · ECG · PPG</span><span>NVIDIA DALI</span><span>Fuzzy ARTMAP</span><span>GMDH</span><span>MOPSO</span>
+        <span>scikit-learn</span><span>multi-view calibration</span><span>HPC clusters</span><span>Docker</span><span>AWS · GCP</span><span>CI/CD</span><span>signal processing</span>
+        <span>AI Product Development</span><span>HuggingFace</span><span>open-source</span>
+      </div>
     </div>
 
-    <div class="timeline">
-
-        <!-- PhD / Doctoral Researcher -->
-        <div class="timeline-item">
-            <div class="timeline-period">2020 – Present</div>
-            <h3>Doctoral Researcher (Ph.D. Candidate)</h3>
-            <div class="timeline-org">Ernst Strüngmann Institute (ESI) for Neuroscience, Frankfurt, Germany</div>
-            <div class="timeline-description">
-                <ul>
-                    <li>Conducting research on head direction cells, spatial orientation, and systems neuroscience.</li>
-                    <li>Developed multi‑camera markerless 3D pose estimation systems for animal behavior analysis.</li>
-                    <li>Designed deep learning pipelines for locomotion tracking, 3D reconstruction, and behavioral mapping.</li>
-                    <li>Performed large‑scale neural data analysis and optimization of machine learning models.</li>
-                </ul>
-            </div>
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about-sec">
+      <!-- <div class="sec-head reveal"><span class="sec-idx">01</span><span class="sec-slash">//</span><h2>about</h2><span class="sec-line"></span></div> -->
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <img src="images/profile-photo.png" alt="Farzad Ziaie Nezhad">
+          <!-- <div class="photo-frame"></div> -->
+          <!-- <p class="photo-cap">fig. 01 — farzad, frankfurt</p> -->
         </div>
-
-        <!-- Data Scientist – DataCoLab -->
-        <div class="timeline-item">
-            <div class="timeline-period">2019 – 2020</div>
-            <h3>Data Scientist</h3>
-            <div class="timeline-org">DataCoLab, London, United Kingdom</div>
-            <div class="timeline-description">
-                <ul>
-                    <li>Developed OCR pipelines for document digitization and automation.</li>
-                    <li>Built face‑recognition systems using deep learning frameworks.</li>
-                    <li>Designed NLP models for text classification and information extraction.</li>
-                </ul>
-            </div>
+        <div class="about-text reveal">
+          <p>I'm a <strong>PhD researcher</strong> at the
+            <a href="https://esi-frankfurt.de/research/people/farzad-ziaie-nezhad/" target="_blank" rel="noopener">Ernst Strüngmann Institute (ESI)</a>
+            &amp; <strong>Goethe University Frankfurt</strong>. My dissertation is about
+            <strong>wireless neural recording implants</strong> and <strong>markerless 3D pose estimation with
+            multi-camera systems</strong>: an <strong>8-camera Basler rig tracks a monkey</strong> with
+            sub-millimetre accuracy (~95% less manual annotation)</p>
+          <p>Before that: an <strong>M.Sc. in Biomedical Engineering</strong> (University of Isfahan), where I modelled sodium
+            excretion with GMDH + MLP networks and estimated force from surface EMG with deep learning; a research stint
+            at the University of Isfahan on medical image segmentation (U-Net, IoU &gt;96%) and EEG/ECG-based detection;
+            a part-time <strong>Data Scientist</strong> role at DataCoLab London (OCR pipelines,
+            face recognition &gt;97%, multilingual NLP); and a <strong>B.Sc. in Electrical Engineering</strong>
+            (Jundishapur University of Technology) with a thesis on non-invasive potassium estimation from ECG.</p>
+          <p>On the industry side I've shipped OCR, face-recognition and NLP systems at DataCoLab London and built
+            <strong>scalable ML infrastructure</strong> — Docker, CI/CD, MLflow, AWS/GCP and Linux HPC clusters — plus
+            mentored engineers and managed stakeholders across labs and startups. So I'm as comfortable
+            <strong>architecting a platform or leading a team</strong> as I am training the models: senior engineer,
+            solution architect, Biomedical Engineer or advisor, depending on what you need.</p>
+          <p>In my spare time I maintain open-source ML tools — <a href="https://github.com/farzad-ziaie/fuzzyart" target="_blank" rel="noopener">fuzzyart</a>            
+            (polynomial neural nets + MOPSO for small-<em>n</em> biomedical data). Both get <strong>live demos in the
+            playground</strong> below.</p>
+          <ul class="fact-list">
+            <li><span>location</span>Frankfurt am Main, Germany 🇩🇪</li>
+            <li><span>affiliation</span>ESI (Max Planck) &amp; Goethe University</li>
+            <li><span>email</span><a href="mailto:farzadziaien@gmail.com">farzadziaien@gmail.com</a></li>
+            <li><span>cv</span><a href="cv.pdf" download>download cv.pdf ↓</a> · <a href="#cv">publications</a></li>
+            <li><span>offering</span><a href="#services">architecture · MLOps/DevOps · full-stack ML · consulting →</a></li>
+            <li><span>open to</span>computer vision · biomedical AI · neuro-ML collaborations &amp; advisory</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <!-- Biomedical Data Analyst -->
-        <div class="timeline-item">
-            <div class="timeline-period">2017 – 2019</div>
-            <h3>Biomedical Data Analyst</h3>
-            <div class="timeline-org">University of Isfahan, Isfahan, Iran</div>
-            <div class="timeline-description">
-                <ul>
-                    <li>Developed predictive models for sodium excretion using neural networks and multi‑objective optimization.</li>
-                    <li>Designed image segmentation algorithms for breast cancer detection.</li>
-                    <li>Analyzed biomedical signals (ECG, EMG, PPG) for disease detection and classification.</li>
-                </ul>
-            </div>
+    <!-- ===== RESEARCH ===== -->
+    <section class="section" id="research">
+      <div class="sec-head reveal"><span class="sec-idx">02</span><span class="sec-slash">//</span><h2>research</h2><span class="sec-line"></span></div>
+      <div class="research-grid">
+        <div class="rig-panel reveal">
+          <div class="rig-wrap" id="rigWrap">
+            <div class="rig-fallback" id="rigFallback">3D viewer needs WebGL —<br>drag would rotate the rig</div>
+          </div>
+          <p class="rig-cap">fig. 02 — 8× Basler ace cameras around a monkey · drag to orbit · calibrated multi-view geometry → markerless, sub-mm 3D pose</p>
         </div>
-
-        <!-- Embedded Systems Developer -->
-        <div class="timeline-item">
-            <div class="timeline-period">2015 – 2016</div>
-            <h3>Embedded Systems Developer</h3>
-            <div class="timeline-org">Urban Engineering Office, Shiraz, Iran</div>
-            <div class="timeline-description">
-                <ul>
-                    <li>Designed and optimized electrical installations for hospitals and medical imaging centers.</li>
-                    <li>Developed real‑time signal processing systems for medical diagnostics.</li>
-                </ul>
-            </div>
+        <div class="research-cards">
+          <article class="card reveal">
+            <h3><span class="card-ico">🎥</span>Markerless 3D pose reconstruction</h3>
+            <p>End-to-end deep-learning pipeline for an <strong>8-camera Basler rig tracking freely-behaving subjects</strong>, managing 
+              <strong>2 GB/sec of data throughput</strong> (post-compression and analysis), achieving 
+              <strong>millimetre-level accuracy at 100 FPS</strong>, and cutting manual annotation effort by 
+              <strong>~95%</strong> in neuroscience experiments (YOLO / LightningPose).</p>
+            <div class="tags"><span>PyTorch</span><span>YOLO</span><span>multi-view calibration</span><span>3D reconstruction</span></div>
+          <!-- </article> -->
+          <!-- <article class="card reveal">
+            <h3><span class="card-ico">🛰️</span>Wireless neural recording implants</h3>
+            <p>The other half of my dissertation: the <strong>Docking Implant</strong>, a lightweight, modular and
+              cost-effective <strong>implant system for chronic wireless electrophysiology</strong> — published as a
+              JoVE (2026) methods protocol.</p>
+            <div class="tags"><span>implant design</span><span>wireless telemetry</span><span>electrophysiology</span><span>JoVE 2026</span></div>
+          </article> -->
+          <!-- <article class="card card-link reveal">
+            <h3><span class="card-ico">📄</span>Publications &amp; CV</h3>
+            <p>Selected papers (Frontiers in Medicine, JoVE) and the full CV as a PDF.</p>
+            <a class="btn btn-ghost btn-sm" href="#cv">publications &amp; cv ↓</a>
+          </article> -->
         </div>
+      </div>
+    </section>
 
-        <!-- Additional Technical & Research Experience -->
-        <div class="timeline-item">
-            <div class="timeline-period">2015 – 2025</div>
-            <h3>Additional Research & Technical Experience</h3>
-            <div class="timeline-org">Various Institutions & Independent Projects</div>
-            <div class="timeline-description">
-                <ul>
-                    <li>Real‑time behavior analysis using 3D reconstructed images (2025).</li>
-                    <li>Behavioral outlier detection from monkey video datasets (2025).</li>
-                    <li>Spike outlier detection and neural cluster discrimination (2025).</li>
-                    <li>RAG‑based legal assistant for document question answering (2025).</li>
-                    <li>Farsi OCR for organizational batch processing (2025).</li>
-                    <li>PPG→ABP mapping using PhysioNet MIMIC‑II dataset (2019).</li>
-                    <li>Video pseudo‑coloring using CNNs (2019).</li>
-                    <li>Music classification using CNN + STFT (2019).</li>
-                    <li>Under‑sampled EMG force modeling using RNNs (2019).</li>
-                    <li>Arrhythmia detection using wavelets + DNN (2018).</li>
-                    <li>Medical facility installation and maintenance at Dena Hospital (2016).</li>
-                </ul>
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="sec-head reveal"><span class="sec-idx">03</span><span class="sec-slash">//</span><h2>projects</h2><span class="sec-line"></span></div>
+      <div class="filters reveal" id="filters">
+        <button class="chip active" data-filter="all">all</button>
+        <button class="chip" data-filter="ml">ML &amp; optimization</button>
+        <button class="chip" data-filter="tools">tools</button>
+      </div>
+      <div class="proj-grid" id="projGrid">
+
+        <article class="card proj reveal" data-cat="ml">
+          <!-- <div class="proj-top"><h3>fuzzyart</h3><span class="pill pill-pypi">pip install fuzzyart</span></div> -->
+          <p>Fuzzy ARTMAP supervised classifier — <strong>incremental learning without catastrophic forgetting</strong>,
+            no need to pre-specify the number of categories. Pure NumPy, sklearn-compatible, fully typed, CI + coverage.</p>
+          <div class="tags"><span>Python</span><span>NumPy</span><span>scikit-learn</span><span>PyPI</span><span>ReadTheDocs</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/farzad-ziaie/fuzzyart" target="_blank" rel="noopener">code ↗</a>
+            <a href="https://pypi.org/project/fuzzyart/" target="_blank" rel="noopener">pypi ↗</a>
+            <a href="https://fuzzyart.readthedocs.io/en/latest/" target="_blank" rel="noopener">docs ↗</a>
+            <a href="#playground" class="demo-link" data-demo="fam">live port ↓</a>
+          </div>
+        </article>
+
+        <article class="card proj reveal" data-cat="ml">
+          <!-- <div class="proj-top"><h3>axera</h3><span class="pill">AGPL-3.0</span></div> -->
+          <p>Polynomial neural networks (LIP activations, GMDH layers) + vectorised <strong>MOPSO with a Rust extension</strong>
+            and a Bland–Altman loss — built for underdetermined biomedical datasets (n ≪ p). Refactored from my original Theano code.</p>
+          <div class="tags"><span>Python</span><span>PyTorch</span><span>CUDA 12</span><span>Rust</span><span>biomedicine</span></div>
+          <div class="proj-links"><a href="https://github.com/farzad-ziaie/axera" target="_blank" rel="noopener">code ↗</a></div>
+        </article>
+
+        <article class="card proj reveal" data-cat="ml">
+          <!-- <div class="proj-top"><h3>mopso</h3><span class="pill">★ 5</span></div> -->
+          <p>Multi-objective particle swarm optimization (Coello Coello &amp; Lechuga, 2002) with a hyper-grid
+            Pareto archive — the optimizer behind my early multi-criteria work.</p>
+          <div class="tags"><span>Python</span><span>optimization</span><span>Pareto front</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/farzad-ziaie/mopso" target="_blank" rel="noopener">code ↗</a>
+            <a href="#playground" class="demo-link" data-demo="mopso">live port ↓</a>
+          </div>
+        </article>
+
+        <article class="card proj reveal" data-cat="tools">
+          <div class="proj-top"><h3>lnav</h3></div>
+          <p>My lnav configuration for slicing through HPC job logs and spike-sorting outputs.</p>
+          <div class="tags"><span>dev-tools</span><span>log analysis</span></div>
+          <div class="proj-links"><a href="https://github.com/farzad-ziaie/lnav" target="_blank" rel="noopener">code ↗</a></div>
+        </article>
+
+        <a class="card proj proj-more reveal" href="https://github.com/farzad-ziaie?tab=repositories" target="_blank" rel="noopener" data-cat="all ml tools">
+          <h3>more on github →</h3>
+          <p>My own public repos — no forks, just the tools I build and maintain.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services">
+      <div class="sec-head reveal"><span class="sec-idx">04</span><span class="sec-slash">//</span><h2>services &amp; consulting</h2><span class="sec-line"></span></div>
+      <p class="section-sub reveal">Beyond research, I help teams <strong>design, build and run</strong> ML systems in
+        production — as a senior engineer, solution architect or Biomedical Engineer. Typical engagements:</p>
+      <div class="proj-grid">
+        <article class="card reveal">
+          <h3><span class="card-ico">🧭</span> tech lead</h3>
+          <p>Technical strategy, roadmap and hiring for ML-heavy products; mentoring engineers; stakeholder management;
+            translating between research, product and business. 6+ years across startups, labs and HPC environments.</p>
+          <div class="tags"><span>strategy</span><span>roadmapping</span><span>hiring</span><span>mentoring</span><span>stakeholders</span></div>
+        </article>
+        <article class="card reveal">
+          <h3><span class="card-ico">🏗️</span>Solution architecture</h3>
+          <p>End-to-end design of production systems: multi-camera computer-vision rigs, real-time video pipelines,
+            REST/FastAPI services, SQL data models and event-driven flows — from whiteboard sketch to deployed,
+            documented system.</p>
+          <div class="tags"><span>system design</span><span>FastAPI / REST</span><span>real-time pipelines</span><span>MySQL</span></div>
+        </article>
+        <article class="card reveal">
+          <h3><span class="card-ico">🐳</span>MLOps &amp; DevOps</h3>
+          <p>Productionising models: Docker, CI/CD (GitHub Actions, GitLab), MLflow experiment tracking, cloud
+            (AWS, GCP) and on-prem HPC clusters — reproducibility, monitoring and cost control for training
+            and inference at scale.</p>
+          <div class="tags"><span>Docker</span><span>CI/CD</span><span>MLflow</span><span>AWS</span><span>GCP</span><span>HPC</span><span>Linux</span></div>
+        </article>
+        <article class="card reveal">
+          <h3><span class="card-ico">⚙️</span>Software &amp; data engineering</h3>
+          <p>Robust Python/C++ services and data pipelines — OCR, NLP, biomedical signal processing
+            (EEG/ECG/EMG/PPG), databases — with tests, versioning and clean handover documentation.</p>
+          <div class="tags"><span>Python</span><span>C++</span><span>MATLAB</span><span>SQL</span><span>OCR / NLP</span><span>signal processing</span></div>
+        </article>
+        <article class="card reveal">
+          <h3><span class="card-ico">🔬</span>Biomedical &amp; CV consulting</h3>
+          <p>Feasibility studies, working prototypes and technical due diligence for medical AI and computer vision:
+            medical image segmentation, markerless 3D pose, wireless neural implants, edge deployment.</p>
+          <div class="tags"><span>computer vision</span><span>medical AI</span><span>prototyping</span><span>due diligence</span></div>
+        </article>
+        <article class="card card-link reveal">
+          <h3><span class="card-ico">💬</span>How we can work together</h3>
+          <p>Advisory calls, architecture reviews, fixed-scope prototypes or embedded engineering — remote, or on-site
+            in Frankfurt am Main.</p>
+          <a class="btn btn-primary btn-sm" href="mailto:farzadziaien@gmail.com?subject=Consulting%20inquiry">start a conversation ✉</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PLAYGROUND ===== -->
+    <section class="section" id="playground">
+      <div class="sec-head reveal"><span class="sec-idx">05</span><span class="sec-slash">//</span><h2>playground</h2><span class="sec-line"></span></div>
+      <p class="section-sub reveal">No backend, no server — every demo runs <strong>100% in your browser</strong>.
+        <strong>fuzzyart</strong> and <strong>mopso</strong> are faithful in-browser ports of my actual Python packages. Go on, poke them.</p>
+
+      <div class="tabs reveal" id="pgTabs">
+        <button class="tab active" data-tab="digit">✏️ draw a digit</button>
+        <button class="tab" data-tab="fam">🧠 fuzzyartmap</button>
+        <button class="tab" data-tab="mopso">🐝 mopso</button>
+        <button class="tab" data-tab="net">📉 train a tiny net</button>
+        <button class="tab" data-tab="spikes">⚡ spike raster</button>
+      </div>
+
+      <!-- demo 1: digit -->
+      <div class="pg-panel active" id="pg-digit">
+        <div class="pg-layout">
+          <div class="pg-stage">
+            <canvas id="drawCanvas" width="280" height="280"></canvas>
+            <div class="pg-stage-note" id="drawStatus">loading mnist subset…</div>
+          </div>
+          <div class="pg-side">
+            <h3>k-NN digit classifier</h3>
+            <p>Draw a digit (0–9) on the left. It's downsampled to 14×14, centroid-centred, then classified by
+              <strong>k-nearest neighbours (k=7)</strong> against 300 embedded MNIST samples. All in vanilla JS.</p>
+            <div class="pred-bars" id="predBars"></div>
+            <div class="pg-controls">
+              <button class="btn btn-ghost btn-sm" id="btnClear">clear</button>
+              <button class="btn btn-ghost btn-sm" id="btnSample">random sample</button>
             </div>
+          </div>
         </div>
+      </div>
 
-    </div>
-</section>
-
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="section-header">
-                <h2>Get in Touch</h2>
-                <p>Interested in collaboration or have questions about my research?</p>
+      <!-- demo 2: fuzzyartmap (faithful port of github.com/farzad-ziaie/fuzzyart) -->
+      <div class="pg-panel" id="pg-fam">
+        <div class="pg-layout">
+          <div class="pg-stage">
+            <canvas id="famCanvas" width="560" height="400"></canvas>
+            <div class="pg-stage-note">click to add a training point of the selected class · rectangles = F2 category boxes [1−w₂,w₀]×[1−w₃,w₁]</div>
+          </div>
+          <div class="pg-side">
+            <h3>fuzzyart — Fuzzy ARTMAP, live port</h3>
+            <p>Port of my <a href="https://github.com/farzad-ziaie/fuzzyart" target="_blank" rel="noopener">fuzzyart</a>
+              package (Carpenter et al. 1992): complement coding A=(u,1−u,v,1−v), choice
+              T<sub>j</sub>=|A∧W<sub>j</sub>|+(1−α)(M−|W<sub>j</sub>|) with α=0.01, match |A∧W<sub>j</sub>|/M ≥ ρ,
+              match-tracking (label conflict ⇒ ρ=match+|ε|, ε=−0.001) and learning W←β(A∧W)+(1−β)W, β=0.2.
+              With 2 features M=4, so a point fully inside a box scores 0.5.</p>
+            <div class="pg-controls col">
+              <div class="pills" id="famClasses">
+                <button class="chip active" data-cls="A">class A</button>
+                <button class="chip" data-cls="B">class B</button>
+                <button class="chip" data-cls="C">class C</button>
+              </div>
+              <label class="slider-row">vigilance ρ (baseline) <output id="famRhoOut">0.40</output>
+                <input type="range" id="famRho" min="0" max="0.5" step="0.01" value="0.40">
+              </label>
+              <div>
+                <button class="btn btn-ghost btn-sm" id="btnFamScatter">scatter 20 × class</button>
+                <button class="btn btn-ghost btn-sm" id="btnFamReset">reset</button>
+              </div>
+              <p class="stat-line">F2 nodes: <strong id="famNodes">0</strong> · inputs: <strong id="famCount">0</strong></p>
+              <p class="stat-line fam-log" id="famLog">—</p>
             </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="mailto:farzadziaien@gmail.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">
-                    <i class="fas fa-envelope"></i> farzadziaien[at]gmail.com
-                </a>
-                <p style="margin-top: 2rem; color: var(--text-muted);">
-                    <i class="fas fa-map-marker-alt"> </i> Schützenstr. 4, 60311 Frankfurt am Main
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Farzad Ziaie Nezhad. All rights reserved.</p>
+          </div>
         </div>
-    </footer>
-    <!-- JavaScript -->
-    <script src="./js/data.js"></script>
-    <script src="./js/main.js"></script>
+      </div>
+
+      <!-- demo 3: mopso (faithful port of github.com/farzad-ziaie/mopso) -->
+      <div class="pg-panel" id="pg-mopso">
+        <div class="pg-layout">
+          <div class="pg-stage wide">
+            <canvas id="mopsoCanvas" width="640" height="420"></canvas>
+            <div class="pg-stage-note">objective space — dim dots: swarm · bright dots + line: Pareto archive (sorted by f1)</div>
+          </div>
+          <div class="pg-side">
+            <h3>mopso — multi-objective PSO, live port</h3>
+            <p>Port of my <a href="https://github.com/farzad-ziaie/mopso" target="_blank" rel="noopener">mopso</a>
+              (Coello Coello &amp; Lechuga 2002): v = w·v + c1·r1·(pbest−x) + c2·r2·(leader−x), Pareto domination
+              (all ≤, any &lt;), hyper-grid archive, leader roulette exp(−β·n), pruning exp(−γ·n), inertia damping
+              w ← 0.99·w each iteration.</p>
+            <div class="pg-controls col">
+              <div class="pills" id="mopsoProblems">
+                <button class="chip active" data-prob="schaffer">schaffer N.1</button>
+                <button class="chip" data-prob="zdt1">ZDT1</button>
+                <button class="chip" data-prob="default3">mopso default (3 obj)</button>
+              </div>
+              <label class="slider-row">inertia w <output id="mWOut">0.20</output>
+                <input type="range" id="mW" min="0" max="0.9" step="0.05" value="0.2"></label>
+              <label class="slider-row">c1 personal <output id="mC1Out">0.10</output>
+                <input type="range" id="mC1" min="0" max="1" step="0.05" value="0.1"></label>
+              <label class="slider-row">c2 global <output id="mC2Out">0.10</output>
+                <input type="range" id="mC2" min="0" max="1" step="0.05" value="0.1"></label>
+              <label class="slider-row">archive nrepo <output id="mRepoOut">50</output>
+                <input type="range" id="mRepo" min="10" max="120" step="5" value="50"></label>
+              <label class="slider-row">grid nGrid <output id="mGridOut">10</output>
+                <input type="range" id="mGrid" min="5" max="20" step="1" value="10"></label>
+              <div>
+                <button class="btn btn-primary btn-sm" id="btnMopsoRun">run</button>
+                <button class="btn btn-ghost btn-sm" id="btnMopsoStep">step</button>
+                <button class="btn btn-ghost btn-sm" id="btnMopsoReset">reset</button>
+              </div>
+              <p class="stat-line">iter <strong id="mIter">0</strong> · archive <strong id="mArchive">0</strong> · w <strong id="mWCur">0.20</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- demo 4: tiny net -->
+      <div class="pg-panel" id="pg-net">
+        <div class="pg-layout">
+          <div class="pg-stage">
+            <canvas id="netCanvas" width="340" height="340"></canvas>
+            <canvas id="lossCanvas" width="340" height="70"></canvas>
+          </div>
+          <div class="pg-side">
+            <h3>Train a 2-16-16-1 net live</h3>
+            <p>Pick a dataset, hit <strong>train</strong>, and watch the decision boundary carve itself out epoch by epoch.
+              Full-batch SGD with backprop, written in ~120 lines of vanilla JS.</p>
+            <div class="pg-controls col">
+              <div class="pills" id="dsPills">
+                <button class="chip active" data-ds="blobs">blobs</button>
+                <button class="chip" data-ds="circles">circles</button>
+                <button class="chip" data-ds="xor">xor</button>
+                <button class="chip" data-ds="spiral">spiral</button>
+              </div>
+              <label class="slider-row">learning rate <output id="lrOut">0.30</output>
+                <input type="range" id="lrSlider" min="0.05" max="1.0" step="0.05" value="0.30">
+              </label>
+              <div>
+                <button class="btn btn-primary btn-sm" id="btnTrain">train</button>
+                <button class="btn btn-ghost btn-sm" id="btnNetReset">reset weights</button>
+              </div>
+              <p class="stat-line">epoch <strong id="epOut">0</strong> · loss <strong id="lossOut">–</strong> · acc <strong id="accOut">–</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- demo 5: spikes -->
+      <div class="pg-panel" id="pg-spikes">
+        <div class="pg-layout">
+          <div class="pg-stage wide">
+            <canvas id="spikeCanvas" width="640" height="380"></canvas>
+          </div>
+          <div class="pg-side">
+            <h3>Simulated spike trains + PSTH</h3>
+            <p>A little nod to my day job: <strong>Poisson spike trains</strong> from N neurons with a stimulus-driven
+              rate bump, shown as a raster plot with a live peri-stimulus time histogram underneath.</p>
+            <div class="pg-controls col">
+              <label class="slider-row">neurons <output id="nOut">120</output>
+                <input type="range" id="nSlider" min="40" max="300" step="10" value="120">
+              </label>
+              <label class="slider-row">baseline rate <output id="r0Out">5 Hz</output>
+                <input type="range" id="r0Slider" min="1" max="15" step="1" value="5">
+              </label>
+              <label class="slider-row">stimulus boost <output id="stimOut">25 Hz</output>
+                <input type="range" id="stimSlider" min="0" max="40" step="1" value="25">
+              </label>
+              <div><button class="btn btn-ghost btn-sm" id="btnSpikeToggle">pause</button></div>
+              <p class="stat-line">stimulus bump at t = 600 ms of each 1200 ms sweep</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS & CV ===== -->
+    <section class="section" id="cv">
+      <div class="sec-head reveal"><span class="sec-idx">06</span><span class="sec-slash">//</span><h2>publications &amp; cv</h2><span class="sec-line"></span></div>
+      <div class="cv-grid">
+        <div class="reveal">
+          <h3 class="sub-head">selected publications</h3>
+          <ul class="pub-list">
+            <!-- <li class="pub">
+              <p class="pub-title">The DREAM implant: a lightweight, modular and cost-effective implant system for chronic electrophysiological recordings</p>
+              <p class="pub-meta">Ziaie Nezhad, F., et al. (2026) · <em>JoVE</em> — methods protocol</p>
+            </li> -->
+            <li class="pub">
+              <p class="pub-title">Automatic classification between COVID-19 and non-COVID-19 pneumonia using chest X-ray images and artificial intelligence</p>
+              <p class="pub-meta">Marateb, H. R., Ziaie Nezhad, F., et al. (2021) · <em>Frontiers in Medicine</em>, 8, 671941</p>
+            </li>
+            <li class="pub">
+              <p class="pub-title">Epileptic seizure prediction from scalp EEG/MEG signals using deep learning</p>
+              <p class="pub-meta">Marateb, H. R., Ziaie Nezhad, F., et al. (2020)</p>
+            </li>
+          </ul>
+          <a class="btn btn-ghost btn-sm" href="https://scholar.google.com/citations?user=mg1fe0IAAAAJ&hl=en" target="_blank" rel="noopener">full list on google scholar ↗</a>
+        </div>
+        <!-- <div class="card cv-card reveal">
+          <h3><span class="card-ico">📄</span>curriculum vitae</h3>
+          <p>Full CV as PDF: education (PhD ESI &amp; Goethe · M.Sc. Isfahan · B.Sc. Jundishapur), experience
+            (ESI · DataCoLab London · Univ. of Isfahan), selected projects, publications, skills and languages
+            (English C2 · German B2 · Persian native).</p>
+          <a class="btn btn-primary btn-sm" href="cv.pdf" download>download cv.pdf ↓</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- ===== BACKGROUND ===== -->
+    <section class="section" id="background">
+      <div class="sec-head reveal"><span class="sec-idx">07</span><span class="sec-slash">//</span><h2>background</h2><span class="sec-line"></span></div>
+      <div class="bg-grid">
+        <div class="timeline reveal">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-when">2022 → 2026 (expected)</p>
+              <h3>PhD in Neuroscience</h3>
+              <p class="tl-where">Ernst Strüngmann Institute (ESI) &amp; Goethe University Frankfurt</p>
+              <p>Dissertation: <em>wireless neural recording implants + markerless 3D pose estimation with
+                multi-camera systems</em>. Research: head-direction cells, gait analysis, neural coding;
+                8-camera Basler rig on a monkey, HPC spike-train pipelines.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-when">2019 → 2020</p>
+              <h3>Data Scientist (part-time, remote)</h3>
+              <p class="tl-where">DataCoLab, London</p>
+              <p>OCR document pipelines (5× faster than manual), deep-learning face recognition (&gt;97% accuracy),
+                multilingual NLP text classification &amp; sentiment.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-when">2017 → 2019</p>
+              <h3>Biomedical Data Engineer</h3>
+              <p class="tl-where">University of Isfahan</p>
+              <p>Sodium-excretion modelling (RMSE −23% vs baseline), U-Net medical segmentation (IoU &gt;96%),
+                arrhythmia &amp; COVID-19 detection from EEG/ECG.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-when">2018 → 2021</p>
+              <h3>M.Sc. Biomedical Engineering</h3>
+              <p class="tl-where">University of Isfahan</p>
+              <p>24-h sodium-excretion prediction (GMDH + MLP); force estimation from surface EMG via deep learning.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <p class="tl-when">2014 → 2018</p>
+              <h3>B.Sc. Electrical Engineering</h3>
+              <p class="tl-where">Jundishapur University of Technology</p>
+              <p>Thesis: non-invasive potassium estimation from ECG signals.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills reveal">
+          <div class="skill-group">
+            <h4>ML &amp; AI</h4>
+            <div class="tags"><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>YOLO</span><span>LightningPose</span><span>HuggingFace</span><span>scikit-learn</span><span>NVIDIA DALI</span><span>MLflow</span></div>
+          </div>
+          <div class="skill-group">
+            <h4>MLOps &amp; infra</h4>
+            <div class="tags"><span>Docker</span><span>Linux</span><span>Git</span><span>GitHub Actions</span><span>CI/CD</span><span>AWS</span><span>GCP</span><span>HPC clusters</span><span>MySQL</span><span>REST APIs</span><span>FastAPI</span></div>
+          </div>
+          <div class="skill-group">
+            <h4>Languages</h4>
+            <div class="tags"><span>Python</span><span>C++</span><span>MATLAB</span><span>VHDL</span><span>SQL</span><span>Rust</span></div>
+          </div>
+          <div class="skill-group">
+            <h4>Biomedical &amp; signals</h4>
+            <div class="tags"><span>EEG</span><span>EMG</span><span>ECG</span><span>PPG</span><span>image segmentation</span><span>3D reconstruction</span><span>multi-view calibration</span></div>
+          </div>
+          <div class="skill-group">
+            <h4>Architecture &amp; leadership</h4>
+            <div class="tags"><span>system design</span><span>technical strategy</span><span>roadmapping</span><span>mentoring</span><span>stakeholder mgmt</span><span>project management</span></div>
+          </div>
+          <div class="skill-group">
+            <h4>Human languages</h4>
+            <div class="tags"><span>English C2</span><span>German B2</span><span>Persian native</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="sec-head reveal"><span class="sec-idx">08</span><span class="sec-slash">//</span><h2>contact</h2><span class="sec-line"></span></div>
+      <div class="contact-inner reveal">
+        <h2 class="contact-big">Let's Discover<br><span class="grad">Then Develop.</span></h2>
+        <p>Open to collaborations in computer vision, biomedical AI and neuro-ML — and to consulting,
+          architecture or engagements. Remote or on-site in Frankfurt.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:farzadziaien@gmail.com?subject=Consulting%20inquiry">✉ start a conversation</a>
+          <!-- <a class="btn btn-ghost" href="cv.pdf" download>📄 cv.pdf</a> -->
+          <a class="btn btn-ghost" href="https://linkedin.com/in/farzad-ziaie-nezhad" target="_blank" rel="noopener">linkedin ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/farzad-ziaie" target="_blank" rel="noopener">github ↗</a>
+          <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=mg1fe0IAAAAJ&hl=en" target="_blank" rel="noopener">scholar ↗</a>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>© <span id="year">2026</span> Farzad Ziaie Nezhad</span>
+        <span class="footer-mid">ziaie.de · farzad-ziaie.github.io</span>
+        <span>hand-built with vanilla HTML/CSS/JS + canvas — hosted on GitHub Pages</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+  <script src="js/neural-bg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pose3d.js"></script>
+  <script src="js/playground.js"></script>
 </body>
 </html>

@@ -1,183 +1,67 @@
-// Mobile menu toggle
-function initMobileMenu() {
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-}
+/* Nav, scroll reveals, active section highlighting, ticker duplication, year. */
+(function () {
+  "use strict";
 
-// Smooth scrolling for anchor links
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+  // duplicate ticker content so the marquee loops seamlessly
+  var track = document.getElementById("tickerTrack");
+  if (track) track.innerHTML += track.innerHTML;
+
+  // mobile menu
+  var toggle = document.getElementById("menuToggle");
+  var links = document.getElementById("navLinks");
+  if (toggle && links) {
+    toggle.addEventListener("click", function () { links.classList.toggle("open"); });
+    links.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () { links.classList.remove("open"); });
     });
-}
+  }
 
-// Add scroll effect to header
-function initHeaderScroll() {
-    let lastScroll = 0;
-    const header = document.querySelector('header');
-    
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.style.background = 'rgba(13, 13, 26, 0.95)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-        } else {
-            header.style.background = 'rgba(13, 13, 26, 0.85)';
-            header.style.boxShadow = 'none';
-        }
-        
-        lastScroll = currentScroll;
+  // reveal on scroll
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      }
     });
-}
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
-// Load and render research highlights
-function loadHighlights() {
-    const container = document.getElementById('highlights-container');
-    if (!container) return;
-    
-    const highlights = WEBSITE_DATA.highlights;
-    
-    if (!highlights || highlights.length === 0) {
-        container.innerHTML = '<p class="loading">No research highlights available.</p>';
-        return;
-    }
-    
-    container.innerHTML = highlights.map(highlight => {
-        const imageOrIcon = highlight.image 
-            ? `<img src="${highlight.image}" alt="${highlight.title}" class="research-image" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-               <div class="research-icon" style="display:none;"><i class="fas ${highlight.icon}"></i></div>`
-            : `<div class="research-icon"><i class="fas ${highlight.icon}"></i></div>`;
-        
-        const linksHtml = highlight.links && highlight.links.length > 0
-            ? `<div class="research-links">
-                ${highlight.links.map(link => `
-                    <a href="${link.url}" target="_blank" class="research-link">
-                        <i class="${link.icon}"></i> ${link.text}
-                    </a>
-                `).join('')}
-               </div>`
-            : '';
-        
-        return `
-            <div class="research-card">
-                ${imageOrIcon}
-                <h3>${highlight.title}</h3>
-                <p>${highlight.description}</p>
-                <div class="research-tags">
-                    ${highlight.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                </div>
-                ${linksHtml}
-            </div>
-        `;
-    }).join('');
-}
+  // active nav link
+  var navAnchors = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var sections = navAnchors
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        navAnchors.forEach(function (a) {
+          a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id);
+        });
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  sections.forEach(function (s) { spy.observe(s); });
 
-// Load and render publications
-function loadPublications() {
-    const container = document.getElementById('publications-container');
-    if (!container) return;
-    
-    const publications = WEBSITE_DATA.publications;
-    
-    if (!publications || publications.length === 0) {
-        container.innerHTML = '<p class="loading">No publications available.</p>';
-        return;
-    }
-    
-    container.innerHTML = publications.map(pub => {
-        const authorsHtml = pub.authors.map(author => 
-            author.isMe ? `<strong>${author.name}</strong>` : author.name
-        ).join(', ');
-        
-        const linksHtml = pub.links && pub.links.length > 0
-            ? `<div class="pub-links">
-                ${pub.links.map(link => `
-                    <a href="${link.url}" target="_blank" class="pub-link">
-                        <i class="${link.icon}"></i> ${link.text}
-                    </a>
-                `).join('')}
-               </div>`
-            : '';
-        
-        return `
-            <div class="publication-item">
-                <div class="pub-year">${pub.year}</div>
-                <h3>${pub.title}</h3>
-                <p class="pub-authors">${authorsHtml}</p>
-                <p class="pub-venue">${pub.venue}</p>
-                ${linksHtml}
-            </div>
-        `;
-    }).join('');
-}
+  // project filters
+  var chips = document.querySelectorAll("#filters .chip");
+  var cards = document.querySelectorAll("#projGrid .proj");
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      chips.forEach(function (c) { c.classList.remove("active"); });
+      chip.classList.add("active");
+      var f = chip.getAttribute("data-filter");
+      cards.forEach(function (card) {
+        var cats = (card.getAttribute("data-cat") || "").split(/\s+/);
+        card.classList.toggle("hide", f !== "all" && cats.indexOf(f) === -1);
+      });
+    });
+  });
 
-// Load and render awards
-function loadAwards() {
-    const container = document.getElementById('awards-container');
-    if (!container) return;
-    
-    const awards = WEBSITE_DATA.awards;
-    
-    if (!awards || awards.length === 0) {
-        container.innerHTML = '<p class="loading">No awards available.</p>';
-        return;
-    }
-    
-    container.innerHTML = awards.map(award => {
-        const linkHtml = award.link 
-            ? `<a href="${award.link.url}" target="_blank" class="award-link">
-                <i class="fas fa-external-link-alt"></i> ${award.link.text}
-               </a>`
-            : '';
-        
-        return `
-            <div class="award-card">
-                <div class="award-icon">
-                    <i class="fas ${award.icon}"></i>
-                </div>
-                <div class="award-year">${award.year}</div>
-                <h3>${award.title}</h3>
-                <p class="award-org">${award.organization}</p>
-                <p class="award-description">${award.description}</p>
-                ${linkHtml}
-            </div>
-        `;
-    }).join('');
-}
-
-// Initialize all functions when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    initMobileMenu();
-    initSmoothScroll();
-    initHeaderScroll();
-    loadHighlights();
-    loadPublications();
-    loadAwards();
-});
+  // footer year
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
